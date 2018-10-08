@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center">信息修改</h2>
+        <form action="/m2/index/update1" method="post">
+            <div class="form-group">
+                <label for="id">当前编辑ID:{$user.id}</label>
+            </div>
+            <div class="form-group">
+                <label for="name">姓名:</label>
+                <input type="text" class="form-control" id="name" name="name" value="{$user.name}">
+            </div>
+            <div class="form-group">
+                <label for="sex">电话：</label>
+                <input type="text" class="form-control" id="sex" name="mobile" value="{$user.mobile}">
+            </div>
+            <div class="form-group">
+                <label for="birthday">住址:</label>
+                <input type="text" class="form-control" id="birthday" name="address" value="{$user.address}">
+            </div>
+            <button type="submit" class="btn btn-primary">保存</button>
+            <input type="hidden" name="id" id="id" value="{$user.id}">
+        </form>
+        <a href="/m2/index/showAll/"><button class="btn btn-primary">取消</button></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<style>
+        .card{
+            width:400px;
+            height: 450px;
+            position:absolute; top:50%; left:50%;
+            margin:-250px 0 0 -200px;
+            border-radius: 20px;
+        }
+        .test-text{
+
+        }
+        .col{
+            margin-top:40px; ;
+        }
+        .form-control{
+            background: #dcffdb;
+            margin-bottom:0;
+
+        }
+        .fa{
+            position: relative;
+            top: 30px;
+            color: #ababab;
+            left: 10px;
+            margin-bottom:0;
+        }
+        .form-control{
+            padding-left:40px;
+        }
+        #yzm{
+            width: 200px;
+        }
+        #code{
+            position: relative;
+            left: 200px;
+            top: -40px;
+        }
+    </style>
+</head>
+<body style="background: #a4e9c4">
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="text-center test-text">用户信息录入</h3>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <form action="/m2/index/create1"  method="get">
+                            <div class="form-group">
+                                 <input type="text" class="form-control" id="usr" name="name" placeholder="姓 名">
+                            </div>
+                            <div class="form-group">
+                                 <input type="text" class="form-control" id="dh"   name="mobile" placeholder="电 话">
+                            </div>
+                            <div class="form-group">
+                                 <input type="text" class="form-control" id="dz"  name="address" placeholder="地 址">
+                            </div>
+                            <button type="submit" class="btn btn-success"style="margin-left: 250px;cursor: pointer">插入数据</button>
+   							<button type="reset" class="btn btn-success"style="margin-left: 250px;cursor: pointer">重置</button>                     
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	</body>
+</html>

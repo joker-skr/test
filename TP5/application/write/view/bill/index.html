@@ -1,0 +1,81 @@
+{extend name="layin"}
+{block name="title"}
+    账单首页
+{/block}
+{}
+{block name="body"}
+    <div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">新建账单</span>
+                <a class="widget-caption" href="/write/Show">点击我查看以往账单？</a>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="/write/Bill/create" method="post">
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label no-padding-right">账单类型</label>
+                            <div class="col-sm-6">
+                                <select name="type" style="width: 100%;">
+                                    <option value="食品" selected="selected">食品</option>
+                                    <option value="电器">电器</option>
+                                    <option value="出行">出行</option>
+                                    <option value="日用品">日用品</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="title" class="col-sm-2 control-label no-padding-right">账单名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="title" placeholder="" name="name" value="必须填写" required="" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pid" class="col-sm-2 control-label no-padding-right">账单日期</label>
+                            <div class="col-sm-6">
+                            	<input class="form-control" id="datetime" placeholder="" name="date" value="必须填写" required="" type="date">
+                            </div>
+                            <p class="help-block col-sm-4 red">*必填</p>
+                        </div>                        
+                        <div class="form-group">
+                            <label for="name" class="col-sm-2 control-label no-padding-right">价格</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="name" placeholder="" name="price" type="text">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="sort" class="col-sm-2 control-label no-padding-right">备注</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="sort" placeholder="" name="comment" value="" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="is_show" class="col-sm-2 control-label no-padding-right">是否显示</label>
+
+                            <div class="col-xs-4">
+                                <label>
+                                    <input class="checkbox-slider slider-icon yesno" name="is_show" checked="checked" type="checkbox">
+                                    <span class="text"></span>
+                                </label>
+                            </div>                            
+                        </div>
+                        <input name="id" value="" type="hidden">
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存账单</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+{/block}

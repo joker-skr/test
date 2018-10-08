@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>json解析</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Description" />
+</head>
+
+<body>
+	
+	<span>城市：</span><input type="text" id="city" /><br />
+	<span>日期：</span><input type="text" id="date"></input><br />
+	<span>课程：</span><input type="text" id="className"></input>
+	<script>
+		/*
+{"name": "caidao",
+ "favorite": [
+ 		"钓鱼", "乒乓球"
+ ],
+ "class": [
+ 		{"course": "php企业应用开发",
+ 		 "className": "软件16-5"
+ 		}, {
+ 			"course": "javascript脚本编程",
+ 			"className": "软件17-1"
+ 		}
+ ]
+}
+		*/
+		
+		var json = '{"city": "广元", ' +
+ '"date": [' +
+ '		"20180328", "20180329"' +
+ '],' +
+ '"class": [' +
+ '		{"course": "php企业应用开发",' +
+ '		 "className": "软件16-5"' +
+ '		}, {' +
+ '			"course": "javascript脚本编程",' +
+ '			"className": "软件17-1"' +
+ '		}' +
+ ']' +
+'}';
+		
+		//alert(json);
+		var obj = JSON.parse(json);
+		
+		//名字
+		document.getElementById('city').value = obj.city;
+		
+		//爱好
+		var list = obj.date;
+		document.getElementById('date').value = '';
+		for (var i = 0; i < list.length; ++i) {
+			document.getElementById('date').value += list[i];
+		}
+		
+		//课程
+		document.getElementById('className').value = '';
+		list = obj.class;
+		for (var i = 0; i < list.length; ++i) {
+			var classItem = list[i];
+			var course = classItem.course;
+			var className = classItem.className;
+			
+			document.getElementById('className').value += course + 
+				'(' + className + ');';
+		}
+	</script>
+</body>
+
+</html>

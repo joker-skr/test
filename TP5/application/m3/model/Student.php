@@ -1,0 +1,8 @@
+<?php
+	namespace app\m3\model;
+	use think\Model;
+	class Student extends model{
+	
+	}
+
+?>
